@@ -7,7 +7,10 @@
         <form class="was-validated" #collegueCreer="ngForm">
           <div class="row no-gutters">
             <div class="col-md-4" style="max-width: 180px;">
-
+              <div class="m-2">
+                <img src="https://i.pinimg.com/originals/c7/4a/77/c74a77f0206f2e6af2c99ad5ddb52795.jpg" height="200" class="card-img" alt="photoID">
+              </div>
+            </div>
             <div class="col-md-8">
               <div class="card-body">
                 <div class="row">
@@ -35,7 +38,7 @@
                   <div class="col-6">
                     <strong>Date de naissance</strong>
                   </div>
-                  <div class="col-6">
+                  <div class="col-6"> <!-- TODO date de naissance required mais empeche pas cliquer sur bouton 'Créer' -->
                     <input class="form-control mb-1" type="date" name="dateDeNaissance" [(ngModel)]="col.dateDeNaissance" required max="2011-07-20" #dateDeNaissance="ngModel"
                     />
                     <div class="invalid-feedback mb-1" *ngIf="(dateDeNaissance.dirty || dateDeNaissance.touched) && dateDeNaissance.invalid">La date de naissance est invalide (âge min. = 18 ans)
@@ -72,7 +75,6 @@
         </form>
       </div>
     </div>
-
   </div>
   <ng-template #erreurBlock>
     <div class="col-6">
