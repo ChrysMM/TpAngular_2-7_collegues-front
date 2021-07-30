@@ -1,0 +1,8 @@
+div class="row justify-content-center" >
+<div class="card text-white bg-info m-3" style="max-width: 18rem;" *ngFor="let photoDTO of listePhotosDTO">
+  <div class="card-header"></div>
+  <div class="card-body">
+    <a routerLink="/galerie/{{photoDTO.matricule}}"><img src="{{photoDTO.photoUrl}}" alt="photoUrl" width="210" height="250"/></a>
+  </div>
+</div>
+</div>
